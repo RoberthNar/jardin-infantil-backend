@@ -10,7 +10,7 @@ public class FabricaEstudiante {
     public Estudiante crear(ComandoEstudiante comandoEstudiante) {
         return new Estudiante(comandoEstudiante.getId(),
                 comandoEstudiante.getNombreEstudiante(),
-                comandoEstudiante.getFechaNacimento(),
+                comandoEstudiante.getFechaNacimiento(),
                 comandoEstudiante.getNombreAcudiente());
     }
 }

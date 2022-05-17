@@ -1,4 +1,4 @@
-package com.ceiba.matricula_estudiante.controlador.estudiante.controlador;
+package com.ceiba.estudiante.controlador;
 
 import com.ceiba.ComandoRespuesta;
 import com.ceiba.estudiante.comando.ComandoEstudiante;

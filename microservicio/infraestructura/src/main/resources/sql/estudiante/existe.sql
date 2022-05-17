@@ -1,1 +1,1 @@
-select count(1) from estudiante where nombre_estudiante = :nombreEstudiante
+select count(1) from estudiante where nombre_estudiante = :nombre

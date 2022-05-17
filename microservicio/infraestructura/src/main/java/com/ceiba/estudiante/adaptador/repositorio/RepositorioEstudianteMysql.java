@@ -1,4 +1,4 @@
-package com.ceiba.matricula_estudiante.controlador.estudiante.adaptador.repositorio;
+package com.ceiba.estudiante.adaptador.repositorio;
 
 import com.ceiba.estudiante.modelo.entidad.Estudiante;
 import com.ceiba.estudiante.puerto.repositorio.RepositorioEstudiante;

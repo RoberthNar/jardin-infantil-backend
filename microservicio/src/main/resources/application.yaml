@@ -9,9 +9,6 @@ server:
       context-path: /jardin-infantil
       session:
          timeout: 21600s
-springdoc:
-   swagger-ui:
-      path: /swagger-ui.html
 spring:
    datasource:
       driver-class-name: com.mysql.cj.jdbc.Driver

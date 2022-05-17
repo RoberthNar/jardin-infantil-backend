@@ -3,11 +3,6 @@ allprojects {
 	repositories {
 		mavenCentral()		
 	}
-
-	project.ext.swagger = [
-			"io.springfox:springfox-swagger-ui:2.9.2",
-			"io.springfox:springfox-swagger2:2.9.2"
-	]
 	
 	project.ext.apachecommons = [
 									"commons-io:commons-io:2.7",
