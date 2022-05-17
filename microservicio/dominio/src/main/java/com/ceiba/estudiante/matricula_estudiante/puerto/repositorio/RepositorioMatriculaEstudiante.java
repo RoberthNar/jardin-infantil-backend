@@ -1,6 +1,6 @@
-package com.ceiba.matricula_estudiante.puerto.repositorio;
+package com.ceiba.estudiante.matricula_estudiante.puerto.repositorio;
 
-import com.ceiba.matricula_estudiante.modelo.entidad.MatriculaEstudiante;
+import com.ceiba.estudiante.matricula_estudiante.modelo.entidad.MatriculaEstudiante;
 
 public interface RepositorioMatriculaEstudiante {
 

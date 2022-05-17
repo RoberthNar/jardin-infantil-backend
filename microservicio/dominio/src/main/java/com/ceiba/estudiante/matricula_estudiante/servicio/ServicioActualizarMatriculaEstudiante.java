@@ -1,9 +1,8 @@
-package com.ceiba.matricula_estudiante.servicio;
+package com.ceiba.estudiante.matricula_estudiante.servicio;
 
 import com.ceiba.dominio.excepcion.ExcepcionDuplicidad;
-import com.ceiba.estudiante.modelo.entidad.Estudiante;
-import com.ceiba.matricula_estudiante.modelo.entidad.MatriculaEstudiante;
-import com.ceiba.matricula_estudiante.puerto.repositorio.RepositorioMatriculaEstudiante;
+import com.ceiba.estudiante.matricula_estudiante.modelo.entidad.MatriculaEstudiante;
+import com.ceiba.estudiante.matricula_estudiante.puerto.repositorio.RepositorioMatriculaEstudiante;
 
 public class ServicioActualizarMatriculaEstudiante {
 

@@ -12,13 +12,6 @@ pipeline{
         disableConcurrentBuilds()
     }
 
-    environment {
-        AMBIENTE_DEV = 'dev'
-        NOMBRE_IMAGEN_DOKER = 'jardin-infantil-backend'
-        NOMBRE_DB_DOKER = 'jardin-infantil-db'
-        PROJECT_PATH_BACK = 'jardin-infantil-backend'
-    }
-
     tools {
         jdk 'JDK11_Centos'
     }
@@ -42,9 +35,6 @@ pipeline{
 
         stage('Compilacion y Test Unitarios'){
             steps{
-                echo "------------>IP Servidor<------------"
-                sh 'hostname -I'
-
                 echo "------------>Clean Tests<------------"
 
                 sh 'chmod +x ./microservicio/gradlew'
@@ -70,11 +60,12 @@ pipeline{
 			}
 		}
 
-        stage('Build DEV') {
-            steps {
-                sh "docker build -t ${NOMBRE_IMAGEN_DOKER}-${AMBIENTE_DEV} . --build-arg AMBIENTE=${AMBIENTE_DEV}"
-            }
-        }
+        stage('Build'){
+           steps{
+                echo "------------>Build<------------"
+                sh './microservicio/gradlew --b ./microservicio/build.gradle build -x test'
+                }
+           }
     }
 
     post {

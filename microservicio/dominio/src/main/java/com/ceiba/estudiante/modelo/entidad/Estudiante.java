@@ -1,8 +1,8 @@
 package com.ceiba.estudiante.modelo.entidad;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import lombok.Getter;
+
+import java.time.LocalDate;
 
 import static com.ceiba.dominio.ValidadorArgumento.validarObligatorio;
 
@@ -20,10 +20,10 @@ public class Estudiante {
             "El estudiante no puede ser mayor a 5 años de edad";
 
 
-    private final Long id;
-    private final String nombreEstudiante;
+    private Long id;
+    private String nombreEstudiante;
     private LocalDate fechaNacimiento;
-    private final String nombreAcudiente;
+    private String nombreAcudiente;
 
     public Estudiante(Long id, String nombreEstudiante, LocalDate fechaNacimiento, String nombreAcudiente) {
         validarObligatorio(nombreEstudiante, SE_DEBE_INGRESAR_NOMBRE_DEL_ESTUDIANTE);

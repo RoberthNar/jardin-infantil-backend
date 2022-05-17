@@ -1,7 +1,7 @@
 package com.ceiba.matricula_estudiante.comando.fabrica;
 
 import com.ceiba.matricula_estudiante.comando.ComandoMatriculaEstudiante;
-import com.ceiba.matricula_estudiante.modelo.entidad.MatriculaEstudiante;
+import com.ceiba.estudiante.matricula_estudiante.modelo.entidad.MatriculaEstudiante;
 import org.springframework.stereotype.Component;
 
 @Component
