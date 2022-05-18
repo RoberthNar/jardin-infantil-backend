@@ -1,23 +1,23 @@
 create table estudiante (
- id int primary key not null auto_increment,
+ id int primary key auto_increment,
  nombre_estudiante varchar(50) not null,
  fecha_nacimiento datetime not null,
  nombre_acudiente varchar(50) not null
 );
 
 create table docente (
- id int primary key not null auto_increment,
+ id int primary key auto_increment,
  nombre_docente varchar(50) not null
 );
 
 create table sala (
- id int primary key not null auto_increment,
+ id int primary key auto_increment,
  nombre_sala varchar(50) not null,
  tipo_sala varchar(50) not null
 );
 
 create table docente_sala (
- id int primary key not null auto_increment,
+ id int primary key auto_increment,
  id_sala int not null,
     foreign key (id_sala) references sala(id),
  id_docente int not null,
@@ -25,7 +25,7 @@ create table docente_sala (
 );
 
 create table matricula_estudiante (
- id int primary key not null auto_increment,
+ id int primary key auto_increment,
  id_estudiante int not null,
     foreign key (id_estudiante) references estudiante(id),
  id_docente_sala int not null,
@@ -35,7 +35,7 @@ create table matricula_estudiante (
 );
 
 create table pension (
- id int primary key not null auto_increment,
+ id int primary key auto_increment,
  id_estudiante int not null,
     foreign key (id_estudiante) references estudiante(id),
  horas_multa int,
@@ -44,7 +44,7 @@ create table pension (
 );
 
 create table costos (
- id int primary key not null auto_increment,
+ id int primary key auto_increment,
  valor_pension_maniana decimal not null,
  valor_pension_completa decimal not null,
  valor_multa decimal not null

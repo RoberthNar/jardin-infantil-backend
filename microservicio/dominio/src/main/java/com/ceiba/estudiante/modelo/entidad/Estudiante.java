@@ -6,6 +6,8 @@ import lombok.Getter;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Period;
+import java.time.YearMonth;
+import java.time.temporal.ChronoUnit;
 
 import static com.ceiba.dominio.ValidadorArgumento.validarObligatorio;
 
@@ -20,7 +22,7 @@ public class Estudiante {
     private static final String EL_ESTUDIANTE_NO_PUEDE_SER_MENOR_A_8_MESES_DE_EDAD =
             "El estudiante no puede ser menor a 8 meses de edad";
     private static final String EL_ESTUDIANTE_NO_PUEDE_SER_MAYOR_A_5_ANIOS_DE_EDAD =
-            "El estudiante no puede ser mayor a 5 años de edad";
+            "El estudiante no puede ser mayor a 5 anios de edad";
 
 
     private Long id;
@@ -42,18 +44,16 @@ public class Estudiante {
     }
 
     public static void validarEdadNoPuedeSerMenorOchoMeses(LocalDate fechaNacimiento, String mensaje) {
-        LocalDate fechaActual =  LocalDateTime.now().toLocalDate();
-        Period periodo = Period.between(fechaNacimiento, fechaActual);
-        Integer mesesEdad = Math.abs(periodo.getMonths());
+        LocalDate fechaActual =  LocalDate.now();
+        Long mesesEdad = ChronoUnit.MONTHS.between(fechaNacimiento, fechaActual);
         if (mesesEdad < 8) {
             throw new ExcepcionValorInvalido(mensaje);
         }
     }
 
     public static void validarEdadNoPuedeSerMayorCincoAnios(LocalDate fechaNacimiento, String mensaje) {
-        LocalDate fechaActual =  LocalDateTime.now().toLocalDate();
-        Period periodo = Period.between(fechaNacimiento, fechaActual);
-        Integer aniosEdad = Math.abs(periodo.getYears());
+        LocalDate fechaActual =  LocalDate.now();
+        Long aniosEdad = ChronoUnit.YEARS.between(fechaNacimiento, fechaActual);
         if (aniosEdad > 5) {
             throw new ExcepcionValorInvalido(mensaje);
         }
