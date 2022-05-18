@@ -1,7 +1,7 @@
 package com.ceiba.matricula_estudiante.comando.manejador;
 
 import com.ceiba.manejador.ManejadorComando;
-import com.ceiba.estudiante.matricula_estudiante.servicio.ServicioEliminarMatriculaEstudiante;
+import com.ceiba.matricula_estudiante.servicio.ServicioEliminarMatriculaEstudiante;
 import org.springframework.stereotype.Component;
 
 @Component

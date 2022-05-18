@@ -1,8 +1,11 @@
 package com.ceiba.estudiante.modelo.entidad;
 
+import com.ceiba.dominio.excepcion.ExcepcionValorInvalido;
 import lombok.Getter;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Period;
 
 import static com.ceiba.dominio.ValidadorArgumento.validarObligatorio;
 
@@ -29,9 +32,30 @@ public class Estudiante {
         validarObligatorio(nombreEstudiante, SE_DEBE_INGRESAR_NOMBRE_DEL_ESTUDIANTE);
         validarObligatorio(nombreAcudiente, SE_DEBE_INGRESAR_NOMBRE_DEL_ACUDIENTE);
         validarObligatorio(fechaNacimiento, SE_DEBE_INGRESAR_LA_FECHA_DE_NACIMIENTO_DEL_ESTUDIANTE);
+
+        validarEdadNoPuedeSerMenorOchoMeses(fechaNacimiento, EL_ESTUDIANTE_NO_PUEDE_SER_MENOR_A_8_MESES_DE_EDAD);
+        validarEdadNoPuedeSerMayorCincoAnios(fechaNacimiento, EL_ESTUDIANTE_NO_PUEDE_SER_MAYOR_A_5_ANIOS_DE_EDAD);
         this.id = id;
         this.nombreEstudiante = nombreEstudiante;
         this.fechaNacimiento = fechaNacimiento;
         this.nombreAcudiente = nombreAcudiente;
+    }
+
+    public static void validarEdadNoPuedeSerMenorOchoMeses(LocalDate fechaNacimiento, String mensaje) {
+        LocalDate fechaActual =  LocalDateTime.now().toLocalDate();
+        Period periodo = Period.between(fechaNacimiento, fechaActual);
+        Integer mesesEdad = Math.abs(periodo.getMonths());
+        if (mesesEdad < 8) {
+            throw new ExcepcionValorInvalido(mensaje);
+        }
+    }
+
+    public static void validarEdadNoPuedeSerMayorCincoAnios(LocalDate fechaNacimiento, String mensaje) {
+        LocalDate fechaActual =  LocalDateTime.now().toLocalDate();
+        Period periodo = Period.between(fechaNacimiento, fechaActual);
+        Integer aniosEdad = Math.abs(periodo.getYears());
+        if (aniosEdad > 5) {
+            throw new ExcepcionValorInvalido(mensaje);
+        }
     }
 }

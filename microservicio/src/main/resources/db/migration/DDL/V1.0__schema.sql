@@ -49,3 +49,24 @@ create table costos (
  valor_pension_completa decimal not null,
  valor_multa decimal not null
 );
+
+INSERT INTO docente(nombre_docente) VALUES ('docente caminadores 1');
+INSERT INTO docente(nombre_docente) VALUES ('docente caminadores 2');
+INSERT INTO docente(nombre_docente) VALUES ('docente Parbulos');
+INSERT INTO docente(nombre_docente) VALUES ('docente Prejardin');
+INSERT INTO docente(nombre_docente) VALUES ('docente Jardin');
+
+INSERT INTO sala(nombre_sala, tipo_sala) VALUES ('Sala Cuna', 'Bebesitos');
+INSERT INTO sala(nombre_sala, tipo_sala) VALUES ('Parbulos', 'Caminadores');
+INSERT INTO sala(nombre_sala, tipo_sala) VALUES ('Prejardin', 'Exploradores');
+INSERT INTO sala(nombre_sala, tipo_sala) VALUES ('Jardin', 'Conocedores');
+
+INSERT INTO docente_sala(id_sala, id_docente) VALUES (1, 1);
+INSERT INTO docente_sala(id_sala, id_docente) VALUES (1, 2);
+INSERT INTO docente_sala(id_sala, id_docente) VALUES (2, 3);
+INSERT INTO docente_sala(id_sala, id_docente) VALUES (3, 4);
+INSERT INTO docente_sala(id_sala, id_docente) VALUES (4, 5);
+
+
+
+

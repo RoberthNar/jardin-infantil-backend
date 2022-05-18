@@ -1,6 +1,6 @@
-package com.ceiba.estudiante.matricula_estudiante.servicio;
+package com.ceiba.matricula_estudiante.servicio;
 
-import com.ceiba.estudiante.matricula_estudiante.puerto.repositorio.RepositorioMatriculaEstudiante;
+import com.ceiba.matricula_estudiante.puerto.repositorio.RepositorioMatriculaEstudiante;
 
 public class ServicioEliminarMatriculaEstudiante {
 

@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Getter
@@ -15,6 +16,6 @@ public class ComandoPension {
     private Long id;
     private Long idEstudiante;
     private Integer horasMulta;
-    private LocalDateTime mesPagado;
+    private LocalDate mesPagado;
     private Double valorTotal;
 }

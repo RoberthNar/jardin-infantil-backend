@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Getter
@@ -16,5 +17,5 @@ public class ComandoMatriculaEstudiante {
     private Long idEstudiante;
     private Long idDocenteSala;
     private String jornada;
-    private LocalDateTime fechaIngreso;
+    private LocalDate fechaIngreso;
 }

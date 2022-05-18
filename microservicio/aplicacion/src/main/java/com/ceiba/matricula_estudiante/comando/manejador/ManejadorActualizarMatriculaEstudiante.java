@@ -3,7 +3,7 @@ package com.ceiba.matricula_estudiante.comando.manejador;
 import com.ceiba.manejador.ManejadorComando;
 import com.ceiba.matricula_estudiante.comando.ComandoMatriculaEstudiante;
 import com.ceiba.matricula_estudiante.comando.fabrica.FabricaMatriculaEstudiante;
-import com.ceiba.estudiante.matricula_estudiante.servicio.ServicioActualizarMatriculaEstudiante;
+import com.ceiba.matricula_estudiante.servicio.ServicioActualizarMatriculaEstudiante;
 import org.springframework.stereotype.Component;
 
 @Component

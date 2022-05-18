@@ -2,8 +2,8 @@ package com.ceiba.matricula_estudiante.adaptador.repositorio;
 
 import com.ceiba.infraestructura.jdbc.CustomNamedParameterJdbcTemplate;
 import com.ceiba.infraestructura.jdbc.sqlstatement.SqlStatement;
-import com.ceiba.estudiante.matricula_estudiante.modelo.entidad.MatriculaEstudiante;
-import com.ceiba.estudiante.matricula_estudiante.puerto.repositorio.RepositorioMatriculaEstudiante;
+import com.ceiba.matricula_estudiante.modelo.entidad.MatriculaEstudiante;
+import com.ceiba.matricula_estudiante.puerto.repositorio.RepositorioMatriculaEstudiante;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.stereotype.Repository;
 

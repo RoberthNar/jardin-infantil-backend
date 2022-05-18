@@ -4,8 +4,8 @@ import com.ceiba.ComandoRespuesta;
 import com.ceiba.manejador.ManejadorComandoRespuesta;
 import com.ceiba.matricula_estudiante.comando.ComandoMatriculaEstudiante;
 import com.ceiba.matricula_estudiante.comando.fabrica.FabricaMatriculaEstudiante;
-import com.ceiba.estudiante.matricula_estudiante.modelo.entidad.MatriculaEstudiante;
-import com.ceiba.estudiante.matricula_estudiante.servicio.ServicioCrearMatriculaEstudiante;
+import com.ceiba.matricula_estudiante.modelo.entidad.MatriculaEstudiante;
+import com.ceiba.matricula_estudiante.servicio.ServicioCrearMatriculaEstudiante;
 import org.springframework.stereotype.Component;
 
 @Component

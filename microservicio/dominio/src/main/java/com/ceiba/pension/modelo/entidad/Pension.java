@@ -1,5 +1,6 @@
 package com.ceiba.pension.modelo.entidad;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import lombok.Getter;
 
@@ -14,10 +15,10 @@ public class Pension {
     private Long id;
     private Long idEstudiante;
     private Integer horasMulta;
-    private LocalDateTime mesPagado;
+    private LocalDate mesPagado;
     private Double valorTotal;
 
-    public Pension(Long id, Long idEstudiante, Integer horasMulta, LocalDateTime mesPagado, Double valorTotal) {
+    public Pension(Long id, Long idEstudiante, Integer horasMulta, LocalDate mesPagado, Double valorTotal) {
         validarObligatorio(idEstudiante, SE_DEBE_INGRESAR_EL_ID_DEL_ESTUDIANTE);
         validarObligatorio(mesPagado, SE_DEBE_INGRESAR_EL_MES_DE_PENSION_A_PAGAR);
         this.id = id;
