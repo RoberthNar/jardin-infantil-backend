@@ -25,7 +25,7 @@ public class MatriculaEstudianteTest {
         assertEquals(1, matriculaEstudiante.getIdEstudiante());
         assertEquals(1, matriculaEstudiante.getIdDocenteSala());
         assertEquals("Completa", matriculaEstudiante.getJornada());
-        assertEquals(LocalDate.now().plusMonths(-9), matriculaEstudiante.getFechaIngreso());
+        assertEquals(LocalDate.now(), matriculaEstudiante.getFechaIngreso());
     }
 
     @Test
