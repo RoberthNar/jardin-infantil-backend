@@ -1,4 +1,9 @@
-insert into estudiante(nombre_estudiante, fecha_nacimiento, nombre_acudiente) values('Estudienta Test 1', now() ,'Acudiente test 1');
+insert into estudiante(nombre_estudiante, fecha_nacimiento, nombre_acudiente)
+values('Estudienta Test 1', now() ,'Acudiente test 1');
+
+insert into matricula_estudiante(id_estudiante, id_docente_sala, jornada, fecha_ingreso)
+values(1, 1 ,'Completa', now());
+
 --insert into cliente(id, nombre, tipo_cliente) values(2,'Cliente 2','COMUN');
 --insert into producto(id, nombre, aplica_iva, valor) values(1,'Producto 1',1, 25000);
 --insert into producto(id, nombre, aplica_iva, valor) values(2,'Producto 2',0, 10000);

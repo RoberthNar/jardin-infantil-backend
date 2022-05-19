@@ -18,7 +18,7 @@ public class MatriculaEstudiante {
     private static final String SE_DEBE_INGRESAR_LA_FECHA_DE_INGRESO_DEL_ESTUDIANTE = "Se debe ingresar la fecha de ingreso del estudiante";
     private static final String SE_DEBE_INGRESAR_UN_IDENTIFICADOR_DE_SALA_CORRECTO = "Se debe ingresar un identificador de sala correcto";
     private static final String SE_DEBE_INGRESAR_UNA_JORNADA_CORRECTA = "Se debe ingresar una jornada correcta";
-    public static final String LA_FECHA_NO_PUEDE_SER_IGUAL_AL_DIA_DE_DESCANSO = "La fecha no puede ser igual al dia de descanso";
+    public static final String LA_FECHA_NO_PUEDE_SER_IGUAL_AL_DIA_DE_DESCANSO = "La fecha no puede ser igual a un dia de descanso";
     public static final String LA_FECHA_NO_PUEDE_SER_MENOR_AL_DIA_ACTUAL = "La fecha no puede ser menor al dia de actual";
 
 
@@ -67,7 +67,7 @@ public class MatriculaEstudiante {
 
     public static void validarFechaNoPuedeSerIgualAlDiaDeDescanso(LocalDate fechaIngreso, String mensaje) {
         DayOfWeek diaDeLaSemana = fechaIngreso.getDayOfWeek();
-        if (diaDeLaSemana == DayOfWeek.MONDAY) {
+        if (diaDeLaSemana == DayOfWeek.SUNDAY || diaDeLaSemana == DayOfWeek.SATURDAY) {
             throw new ExcepcionValorInvalido(mensaje);
         }
     }

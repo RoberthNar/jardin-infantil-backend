@@ -21,6 +21,11 @@ public class MatriculaEstudianteTestDataBuilder {
         this.fechaIngreso = LocalDate.now();
     }
 
+    public MatriculaEstudianteTestDataBuilder conId(Long id) {
+        this.id = id;
+        return this;
+    }
+
     public MatriculaEstudianteTestDataBuilder conIdEstudiante(Long idEstudiante) {
         this.idEstudiante = idEstudiante;
         return this;

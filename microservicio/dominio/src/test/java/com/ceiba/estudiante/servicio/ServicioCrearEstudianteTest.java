@@ -36,9 +36,9 @@ public class ServicioCrearEstudianteTest {
         Mockito.when(repositorioEstudiante.crear(estudiante)).thenReturn(10L);
         ServicioCrearEstudiante servicioCrearEstudiante = new ServicioCrearEstudiante(repositorioEstudiante);
 
-        Long idCancha = servicioCrearEstudiante.ejecutar(estudiante);
+        Long idEstudiante = servicioCrearEstudiante.ejecutar(estudiante);
 
-        assertEquals(10L,idCancha);
+        assertEquals(10L,idEstudiante);
         Mockito.verify(repositorioEstudiante, Mockito.times(1)).crear(estudiante);
     }
 }

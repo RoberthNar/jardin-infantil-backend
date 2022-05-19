@@ -10,8 +10,8 @@ import org.mockito.Mockito;
 public class ServicioEliminarEstudianteTest {
 
     @Test
-    @DisplayName("Deberia eliminar la Cancha llamando al repositorio")
-    void deberiaEliminarLaCanchaLlamandoAlRepositorio() {
+    @DisplayName("Deberia eliminar el estudiante llamando al repositorio")
+    void deberiaEliminarElEstudianteLlamandoAlRepositorio() {
         RepositorioEstudiante repositorioEstudiante = Mockito.mock(RepositorioEstudiante.class);
         ServicioEliminarEstudiante servicioEliminarEstudiante = new ServicioEliminarEstudiante(repositorioEstudiante);
 
