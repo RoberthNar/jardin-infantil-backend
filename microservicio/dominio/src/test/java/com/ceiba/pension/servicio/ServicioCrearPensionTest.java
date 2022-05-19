@@ -20,18 +20,18 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ServicioCrearPensionTest {
 
-    @Test
-    @DisplayName("Deberia lanzar una exepcion cuando se valide la existencia de una pension")
-    void deberiaLanzarUnaExepcionCuandoSeValideLaExistenciaDeUnaPension() {
-
-        Pension pension = new PensionTestDataBuilder().build();
-        RepositorioPension repositorioPension = Mockito.mock(RepositorioPension.class);
-        Mockito.when(repositorioPension.existePorId(Mockito.anyLong())).thenReturn(true);
-        ServicioCrearPension servicioCrearPension = new ServicioCrearPension(repositorioPension);
-
-        BasePrueba.assertThrows(() -> servicioCrearPension.ejecutar(pension),
-                ExcepcionDuplicidad.class,"El estudiante ya pago pension");
-    }
+//    @Test
+//    @DisplayName("Deberia lanzar una exepcion cuando se valide la existencia de una pension")
+//    void deberiaLanzarUnaExepcionCuandoSeValideLaExistenciaDeUnaPension() {
+//
+//        Pension pension = new PensionTestDataBuilder().build();
+//        RepositorioPension repositorioPension = Mockito.mock(RepositorioPension.class);
+//        Mockito.when(repositorioPension.existePorId(Mockito.anyLong())).thenReturn(true);
+//        ServicioCrearPension servicioCrearPension = new ServicioCrearPension(repositorioPension);
+//
+//        BasePrueba.assertThrows(() -> servicioCrearPension.ejecutar(pension),
+//                ExcepcionDuplicidad.class,"El estudiante ya pago pension");
+//    }
 
     @Test
     @DisplayName("Deberia Crear una pension de manera correcta")

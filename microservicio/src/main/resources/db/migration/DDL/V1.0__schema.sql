@@ -39,8 +39,8 @@ create table pension (
  id_estudiante int not null,
     foreign key (id_estudiante) references estudiante(id),
  horas_multa int,
- mes_a_pagar datetime not null,
- valor_pagar decimal not null
+ mes_pagado datetime not null,
+ valor_total decimal not null
 );
 
 create table costos (
