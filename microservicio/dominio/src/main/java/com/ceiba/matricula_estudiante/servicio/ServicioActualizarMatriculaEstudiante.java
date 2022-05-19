@@ -7,7 +7,6 @@ import com.ceiba.matricula_estudiante.puerto.repositorio.RepositorioMatriculaEst
 public class ServicioActualizarMatriculaEstudiante {
 
     private static final String El_ESTUDIANTE_NO_ESTA_MATRICULADO = "El estudiante no esta matriculado";
-    private static final String EL_ESTUDIANTE_YA_EXISTE_EN_EL_SISTEMA = "El estudiante ya existe en el sistema";
 
     private final RepositorioMatriculaEstudiante repositorioMatriculaEstudiante;
 
