@@ -1,6 +1,5 @@
 package com.ceiba.pension.servicio;
 
-import com.ceiba.estudiante.puerto.repositorio.RepositorioEstudiante;
 import com.ceiba.pension.puerto.repositorio.RepositorioPension;
 
 public class ServicioEliminarPension {

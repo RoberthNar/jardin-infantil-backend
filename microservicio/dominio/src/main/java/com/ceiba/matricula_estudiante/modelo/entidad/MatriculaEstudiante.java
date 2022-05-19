@@ -54,7 +54,7 @@ public class MatriculaEstudiante {
     }
 
     public static void validarJornadaCorrecto(String jornada, String mensaje) {
-        if (!(jornada.toUpperCase().equals("MANIANA") || jornada.toUpperCase().equals("COMPLETA"))) {
+        if (!(jornada.equalsIgnoreCase("MANIANA") || jornada.equalsIgnoreCase("COMPLETA"))) {
             throw new ExcepcionValorInvalido(mensaje);
         }
     }
