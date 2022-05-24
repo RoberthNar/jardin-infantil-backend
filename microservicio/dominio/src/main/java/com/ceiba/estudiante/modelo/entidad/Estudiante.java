@@ -24,6 +24,9 @@ public class Estudiante {
     private static final String EL_ESTUDIANTE_NO_PUEDE_SER_MAYOR_A_5_ANIOS_DE_EDAD =
             "El estudiante no puede ser mayor a 5 anios de edad";
 
+    private static final int EDAD_MINIMA_DE_INGRESO_EN_MESES = 8;
+    private static final int EDAD_MAXIMA_DE_INGRESO_EN_ANIOS = 5;
+
 
     private Long id;
     private String nombreEstudiante;
@@ -46,7 +49,7 @@ public class Estudiante {
     public static void validarEdadNoPuedeSerMenorOchoMeses(LocalDate fechaNacimiento, String mensaje) {
         LocalDate fechaActual =  LocalDate.now();
         Long mesesEdad = ChronoUnit.MONTHS.between(fechaNacimiento, fechaActual);
-        if (mesesEdad < 8) {
+        if (mesesEdad < EDAD_MINIMA_DE_INGRESO_EN_MESES) {
             throw new ExcepcionValorInvalido(mensaje);
         }
     }
@@ -54,7 +57,7 @@ public class Estudiante {
     public static void validarEdadNoPuedeSerMayorCincoAnios(LocalDate fechaNacimiento, String mensaje) {
         LocalDate fechaActual =  LocalDate.now();
         Long aniosEdad = ChronoUnit.YEARS.between(fechaNacimiento, fechaActual);
-        if (aniosEdad > 5) {
+        if (aniosEdad > EDAD_MAXIMA_DE_INGRESO_EN_ANIOS) {
             throw new ExcepcionValorInvalido(mensaje);
         }
     }

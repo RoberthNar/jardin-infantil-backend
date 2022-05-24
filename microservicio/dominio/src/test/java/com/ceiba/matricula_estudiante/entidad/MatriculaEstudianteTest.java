@@ -110,7 +110,7 @@ public class MatriculaEstudianteTest {
     @DisplayName("Deberia fallar la creacion cuando el dia no es habil")
     void deberiaFallarCuandoElDiaNoEsHabil() {
 
-        LocalDate fecha = LocalDate.parse("2022-05-22");
+        LocalDate fecha = LocalDate.parse("2022-05-29");
         MatriculaEstudianteTestDataBuilder matriculaEstudianteTestDataBuilder =
                 new MatriculaEstudianteTestDataBuilder().conFechaIngreso(fecha);
         BasePrueba.assertThrows(() -> {
