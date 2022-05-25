@@ -42,12 +42,12 @@ public class DaoEstudianteMysql implements DaoEstudiante {
                 .query(sqlListarPorNombre, paramSource, new MapeoEstudiante());
     }
     @Override
-    public List<DtoEstudiante> listarPorId(Long idEstudiante) {
+    public DtoEstudiante listarPorId(Long idEstudiante) {
         MapSqlParameterSource paramSource = new MapSqlParameterSource();
         paramSource.addValue("idEstudiante", idEstudiante);
         return this.customNamedParameterJdbcTemplate
                 .getNamedParameterJdbcTemplate()
-                .query(sqlListarPorNombre, paramSource, new MapeoEstudiante());
+                .queryForObject(sqlListarPorId, paramSource, new MapeoEstudiante());
     }
 
 }

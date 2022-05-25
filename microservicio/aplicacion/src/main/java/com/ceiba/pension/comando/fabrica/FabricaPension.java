@@ -9,6 +9,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class FabricaPension {
 
+
+
     public Pension crear(ComandoPension comandoPension) {
         return new Pension(comandoPension.getId(),
                 comandoPension.getIdEstudiante(),

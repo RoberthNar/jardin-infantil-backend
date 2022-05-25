@@ -15,7 +15,6 @@ import java.time.LocalDateTime;
 public class ComandoMatriculaEstudiante {
     private Long id;
     private Long idEstudiante;
-    private Long idDocenteSala;
     private String jornada;
     private LocalDate fechaIngreso;
 }

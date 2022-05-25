@@ -39,7 +39,7 @@ public class ConsultaControladorEstudiante {
     }
 
     @GetMapping(value = "/id/{idEstudiante}")
-    public List<DtoEstudiante> listarPorId(@PathVariable Long idEstudiante) {
+    public DtoEstudiante listarPorId(@PathVariable Long idEstudiante) {
         return this.manejadorListarEstudiantePorId.ejecutar(idEstudiante);
     }
 

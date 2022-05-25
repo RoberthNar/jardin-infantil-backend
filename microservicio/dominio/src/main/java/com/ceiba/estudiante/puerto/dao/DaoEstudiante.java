@@ -8,7 +8,7 @@ public interface DaoEstudiante {
 
     List<DtoEstudiante> listarPorNombre(String nombreEstudiante);
 
-    List<DtoEstudiante> listarPorId(Long idEstudiante);
+    DtoEstudiante listarPorId(Long idEstudiante);
 
     List<DtoEstudiante> listar();
 
