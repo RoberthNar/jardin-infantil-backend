@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface DaoMatriculaEstudiante {
 
-    List<DtoMatriculaEstudiante> listarPorIdEstudiante(Long idEstudiante);
+    DtoMatriculaEstudiante listarPorIdEstudiante(Long idEstudiante);
 
 }

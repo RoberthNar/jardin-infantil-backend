@@ -24,7 +24,7 @@ public class ConsultaControladorMatriculaEstudiante {
     }
 
     @GetMapping(value = "/{idEstudiante}")
-    public List<DtoMatriculaEstudiante> listarPorIdEstudiante(@PathVariable Long idEstudiante) {
+    public DtoMatriculaEstudiante listarPorIdEstudiante(@PathVariable Long idEstudiante) {
         return this.manejadorListarMatriculaEstudiantePorIdEstudiante.ejecutar(idEstudiante);
     }
 

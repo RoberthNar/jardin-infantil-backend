@@ -17,5 +17,5 @@ public class ComandoPension {
     private Long idEstudiante;
     private Integer horasMulta;
     private LocalDate mesPagado;
-    private Double valorTotal;
+//    private Double valorTotal;
 }
