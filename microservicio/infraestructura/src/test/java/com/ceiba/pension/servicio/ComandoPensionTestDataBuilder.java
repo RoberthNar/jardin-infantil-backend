@@ -14,13 +14,12 @@ public class ComandoPensionTestDataBuilder {
     private Double valorTotal;
 
     public ComandoPensionTestDataBuilder() {
-        this.idEstudiante = 2L;
+        this.idEstudiante = 1L;
         this.horasMulta = 0;
         this.mesPagado = LocalDate.now();
-        this.valorTotal = 350000D;
     }
 
     public ComandoPension build() {
-        return new ComandoPension(id, idEstudiante, horasMulta, mesPagado, valorTotal);
+        return new ComandoPension(id, idEstudiante, horasMulta, mesPagado);
     }
 }

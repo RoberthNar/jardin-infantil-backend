@@ -28,7 +28,6 @@ public class FabricaPension {
                 comandoPension.getHorasMulta(),
                 comandoPension.getMesPagado(),
                 calcularPension(comandoPension));
-                //comandoPension.getValorTotal());
     }
 
     private double calcularPension(ComandoPension comandoPension){

@@ -16,12 +16,11 @@ public class ComandoMatriculaEstudianteTestDataBuilder {
 
     public ComandoMatriculaEstudianteTestDataBuilder() {
         this.idEstudiante = 2L;
-        this.idDocenteSala = 1L;
         this.jornada = "Completa";
         this.fechaIngreso = LocalDate.now();
     }
 
     public ComandoMatriculaEstudiante build() {
-        return new ComandoMatriculaEstudiante(id, idEstudiante, idDocenteSala, jornada, fechaIngreso);
+        return new ComandoMatriculaEstudiante(id, idEstudiante, jornada, fechaIngreso);
     }
 }
