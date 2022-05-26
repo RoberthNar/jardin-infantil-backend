@@ -81,19 +81,6 @@ public class MatriculaEstudianteTest {
     }
 
     @Test
-    @DisplayName("Deberia fallar la creacion cuando la sala no es correcta")
-    void deberiaFallarCuandoLaSalaNoEsCorrecta() {
-
-        Long idDocenteSala = 6L;
-        MatriculaEstudianteTestDataBuilder matriculaEstudianteTestDataBuilder =
-                new MatriculaEstudianteTestDataBuilder().conIdDocenteSala(idDocenteSala);
-        BasePrueba.assertThrows(() -> {
-                    matriculaEstudianteTestDataBuilder.build();
-                },
-                ExcepcionValorInvalido.class, "Se debe ingresar un identificador de sala correcto");
-    }
-
-    @Test
     @DisplayName("Deberia fallar la creacion cuando la jornada no es correcta")
     void deberiaFallarCuandoLaJornadaNoEsCorrecta() {
 
