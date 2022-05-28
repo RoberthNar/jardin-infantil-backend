@@ -1,8 +1,10 @@
 package com.ceiba.matricula_estudiante.comando.manejador;
 
+import com.ceiba.estudiante.modelo.entidad.Estudiante;
 import com.ceiba.manejador.ManejadorComando;
 import com.ceiba.matricula_estudiante.comando.ComandoMatriculaEstudiante;
 import com.ceiba.matricula_estudiante.comando.fabrica.FabricaMatriculaEstudiante;
+import com.ceiba.matricula_estudiante.modelo.entidad.MatriculaEstudiante;
 import com.ceiba.matricula_estudiante.servicio.ServicioActualizarMatriculaEstudiante;
 import org.springframework.stereotype.Component;
 
@@ -19,6 +21,8 @@ public class ManejadorActualizarMatriculaEstudiante implements ManejadorComando<
 
     @Override
     public void ejecutar(ComandoMatriculaEstudiante comando) {
+        MatriculaEstudiante matriculaEstudiante = this.fabricaMatriculaEstudiante.crear(comando);
+        servicioActualizarMatriculaEstudiante.ejecutar(matriculaEstudiante);
 
     }
 }

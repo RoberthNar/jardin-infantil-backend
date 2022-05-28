@@ -3,6 +3,7 @@ package com.ceiba.pension.comando.manejador;
 import com.ceiba.manejador.ManejadorComando;
 import com.ceiba.pension.comando.ComandoPension;
 import com.ceiba.pension.comando.fabrica.FabricaPension;
+import com.ceiba.pension.modelo.entidad.Pension;
 import com.ceiba.pension.servicio.ServicioActualizarPension;
 import org.springframework.stereotype.Component;
 
@@ -20,6 +21,8 @@ public class ManejadorActualizarPension implements ManejadorComando<ComandoPensi
 
     @Override
     public void ejecutar(ComandoPension comando) {
+        Pension pension = this.fabricaPension.crear(comando);
+        servicioActualizarPension.ejecutar(pension);
 
     }
 }
