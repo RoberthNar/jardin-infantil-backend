@@ -15,11 +15,14 @@ public class MapeoMatriculaEstudiante implements RowMapper<DtoMatriculaEstudiant
 
         Long id = resultSet.getLong("id");
         Long idEstudiante = resultSet.getLong("id_estudiante");
+        String nombreEstudiante = resultSet.getString("nombre_estudiante");
         Long idDocenteSala = resultSet.getLong("id_docente_sala");
+        String nombreSala = resultSet.getString("nombre_sala");
+        String nombreDocente = resultSet.getString("nombre_docente");
         String jornada = resultSet.getString("jornada");
         LocalDate fechaIngreso = extraerLocalDate(resultSet, "fecha_ingreso");
 
-        return new DtoMatriculaEstudiante(id, idEstudiante, idDocenteSala, jornada, fechaIngreso);
+        return new DtoMatriculaEstudiante(id, idEstudiante, nombreEstudiante, idDocenteSala, nombreSala, nombreDocente, jornada, fechaIngreso);
     }
 
 }

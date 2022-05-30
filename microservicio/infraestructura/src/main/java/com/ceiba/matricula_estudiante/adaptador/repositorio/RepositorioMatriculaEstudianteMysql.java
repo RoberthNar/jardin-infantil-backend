@@ -48,9 +48,9 @@ public class RepositorioMatriculaEstudianteMysql implements RepositorioMatricula
     }
 
     @Override
-    public boolean existePorId(Long id) {
+    public boolean existePorId(Long idEstudiante) {
         MapSqlParameterSource paramSource = new MapSqlParameterSource();
-        paramSource.addValue("id", id);
+        paramSource.addValue("idEstudiante", idEstudiante);
 
         return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate()
                 .queryForObject(sqlExisteMatriculaEstudiantePorId, paramSource, Boolean.class);

@@ -1,1 +1,1 @@
-select count(1) from matricula_estudiante where id = :id
+select count(1) from matricula_estudiante where id_estudiante = :idEstudiante

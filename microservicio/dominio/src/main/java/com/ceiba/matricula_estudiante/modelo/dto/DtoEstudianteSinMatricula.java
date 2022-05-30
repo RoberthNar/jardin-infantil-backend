@@ -7,15 +7,9 @@ import java.time.LocalDate;
 
 @Getter
 @AllArgsConstructor
-public class DtoMatriculaEstudiante {
+public class DtoEstudianteSinMatricula {
 
     private Long id;
     private Long idEstudiante;
     private String nombreEstudiante;
-    private Long idDocenteSala;
-    private String nombreSala;
-    private String nombreDocente;
-    private String jornada;
-    private LocalDate fechaIngreso;
-
 }

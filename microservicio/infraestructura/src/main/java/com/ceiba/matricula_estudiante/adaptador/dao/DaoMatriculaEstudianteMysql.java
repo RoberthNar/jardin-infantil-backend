@@ -13,8 +13,10 @@ import java.util.List;
 @Component
 public class DaoMatriculaEstudianteMysql implements DaoMatriculaEstudiante {
 
-
     private final CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate;
+
+    @SqlStatement(namespace = "matricula_estudiante", value = "listar")
+    private static String sqlListarMatriculaEstudiante;
 
     @SqlStatement(namespace = "matricula_estudiante", value = "listarPorIdEstudiante")
     private static String sqlListarPorIdEstudiante;
@@ -30,6 +32,13 @@ public class DaoMatriculaEstudianteMysql implements DaoMatriculaEstudiante {
         return this.customNamedParameterJdbcTemplate
                 .getNamedParameterJdbcTemplate()
                 .queryForObject(sqlListarPorIdEstudiante, paramSource, new MapeoMatriculaEstudiante());
+    }
+
+    @Override
+    public List<DtoMatriculaEstudiante> listar() {
+        return this.customNamedParameterJdbcTemplate
+                .getNamedParameterJdbcTemplate()
+                .query(sqlListarMatriculaEstudiante, new MapeoMatriculaEstudiante());
     }
 
 }
