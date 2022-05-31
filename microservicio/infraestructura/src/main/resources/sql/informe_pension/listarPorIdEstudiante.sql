@@ -1,4 +1,4 @@
-SELECT e.nombre_estudiante, e.fecha_nacimiento, e.nombre_acudiente
+SELECT p.id, e.nombre_estudiante, e.fecha_nacimiento, e.nombre_acudiente
 , m.jornada, d.nombre_docente, s.nombre_sala
 , p.horas_multa, p.mes_pagado, p.valor_total 
 FROM 
