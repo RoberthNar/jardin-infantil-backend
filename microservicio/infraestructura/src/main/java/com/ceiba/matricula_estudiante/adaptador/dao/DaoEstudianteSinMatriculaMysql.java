@@ -3,10 +3,7 @@ package com.ceiba.matricula_estudiante.adaptador.dao;
 import com.ceiba.infraestructura.jdbc.CustomNamedParameterJdbcTemplate;
 import com.ceiba.infraestructura.jdbc.sqlstatement.SqlStatement;
 import com.ceiba.matricula_estudiante.modelo.dto.DtoEstudianteSinMatricula;
-import com.ceiba.matricula_estudiante.modelo.dto.DtoMatriculaEstudiante;
 import com.ceiba.matricula_estudiante.puerto.dao.DaoEstudianteSinMatricula;
-import com.ceiba.matricula_estudiante.puerto.dao.DaoMatriculaEstudiante;
-import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

@@ -3,8 +3,6 @@ package com.ceiba.matricula_estudiante.entidad;
 import com.ceiba.BasePrueba;
 import com.ceiba.dominio.excepcion.ExcepcionValorInvalido;
 import com.ceiba.dominio.excepcion.ExcepcionValorObligatorio;
-import com.ceiba.estudiante.modelo.entidad.Estudiante;
-import com.ceiba.estudiante.servicio.testdatabuilder.EstudianteTestDataBuilder;
 import com.ceiba.matricula_estudiante.modelo.entidad.MatriculaEstudiante;
 import com.ceiba.matricula_estudiante.servicio.testdatabuilder.MatriculaEstudianteTestDataBuilder;
 import org.junit.jupiter.api.DisplayName;
@@ -97,7 +95,7 @@ public class MatriculaEstudianteTest {
     @DisplayName("Deberia fallar la creacion cuando el dia no es habil")
     void deberiaFallarCuandoElDiaNoEsHabil() {
 
-        LocalDate fecha = LocalDate.parse("2022-05-29");
+        LocalDate fecha = LocalDate.parse("2022-06-05");
         MatriculaEstudianteTestDataBuilder matriculaEstudianteTestDataBuilder =
                 new MatriculaEstudianteTestDataBuilder().conFechaIngreso(fecha);
         BasePrueba.assertThrows(() -> {

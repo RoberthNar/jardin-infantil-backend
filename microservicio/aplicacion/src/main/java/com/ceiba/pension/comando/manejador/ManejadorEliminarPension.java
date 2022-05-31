@@ -1,6 +1,5 @@
 package com.ceiba.pension.comando.manejador;
 
-import com.ceiba.estudiante.servicio.ServicioEliminarEstudiante;
 import com.ceiba.manejador.ManejadorComando;
 import com.ceiba.pension.servicio.ServicioEliminarPension;
 import org.springframework.stereotype.Component;

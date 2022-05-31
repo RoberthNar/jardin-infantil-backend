@@ -1,7 +1,6 @@
 package com.ceiba.pension.modelo.entidad;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import lombok.Getter;
 
 import static com.ceiba.dominio.ValidadorArgumento.validarObligatorio;

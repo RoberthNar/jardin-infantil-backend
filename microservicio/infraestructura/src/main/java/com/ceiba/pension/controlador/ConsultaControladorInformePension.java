@@ -1,6 +1,5 @@
 package com.ceiba.pension.controlador;
 
-import com.ceiba.matricula_estudiante.modelo.dto.DtoMatriculaEstudiante;
 import com.ceiba.pension.consulta.ManejadorListarInformePensionEstudiantes;
 import com.ceiba.pension.consulta.ManejadorListarPensionEstudiantePorId;
 import com.ceiba.pension.modelo.dto.DtoInformePension;

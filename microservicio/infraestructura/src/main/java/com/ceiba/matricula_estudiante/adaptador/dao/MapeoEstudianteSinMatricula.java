@@ -2,12 +2,10 @@ package com.ceiba.matricula_estudiante.adaptador.dao;
 
 import com.ceiba.infraestructura.jdbc.MapperResult;
 import com.ceiba.matricula_estudiante.modelo.dto.DtoEstudianteSinMatricula;
-import com.ceiba.matricula_estudiante.modelo.dto.DtoMatriculaEstudiante;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalDate;
 
 public class MapeoEstudianteSinMatricula implements RowMapper<DtoEstudianteSinMatricula>, MapperResult{
 

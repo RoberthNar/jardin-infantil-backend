@@ -1,8 +1,6 @@
 package com.ceiba.pension.servicio;
 
 import com.ceiba.dominio.excepcion.ExcepcionDuplicidad;
-import com.ceiba.estudiante.modelo.entidad.Estudiante;
-import com.ceiba.estudiante.puerto.repositorio.RepositorioEstudiante;
 import com.ceiba.pension.modelo.entidad.Pension;
 import com.ceiba.pension.puerto.repositorio.RepositorioPension;
 

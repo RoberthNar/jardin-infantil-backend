@@ -1,7 +1,6 @@
 package com.ceiba.pension.comando.fabrica;
 
 import com.ceiba.matricula_estudiante.modelo.dto.DtoMatriculaEstudiante;
-import com.ceiba.matricula_estudiante.modelo.entidad.MatriculaEstudiante;
 import com.ceiba.matricula_estudiante.puerto.dao.DaoMatriculaEstudiante;
 import com.ceiba.pension.comando.ComandoPension;
 import com.ceiba.pension.modelo.entidad.Pension;

@@ -1,7 +1,5 @@
 package com.ceiba.pension.adaptador.repositorio;
 
-import com.ceiba.estudiante.modelo.entidad.Estudiante;
-import com.ceiba.estudiante.puerto.repositorio.RepositorioEstudiante;
 import com.ceiba.infraestructura.jdbc.CustomNamedParameterJdbcTemplate;
 import com.ceiba.infraestructura.jdbc.sqlstatement.SqlStatement;
 import com.ceiba.pension.modelo.entidad.Pension;

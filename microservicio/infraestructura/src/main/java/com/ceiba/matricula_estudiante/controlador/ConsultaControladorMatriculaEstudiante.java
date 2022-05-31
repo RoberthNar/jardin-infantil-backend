@@ -1,7 +1,6 @@
 package com.ceiba.matricula_estudiante.controlador;
 
 
-import com.ceiba.estudiante.modelo.dto.DtoEstudiante;
 import com.ceiba.matricula_estudiante.consulta.ManejadorListarEstudiantesSinMatricula;
 import com.ceiba.matricula_estudiante.consulta.ManejadorListarMatriculaEstudiantePorIdEstudiante;
 import com.ceiba.matricula_estudiante.consulta.ManejadorListarMatriculaEstudiantes;

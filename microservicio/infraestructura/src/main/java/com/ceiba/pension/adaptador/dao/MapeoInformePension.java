@@ -1,7 +1,6 @@
 package com.ceiba.pension.adaptador.dao;
 
 import com.ceiba.infraestructura.jdbc.MapperResult;
-import com.ceiba.matricula_estudiante.modelo.dto.DtoMatriculaEstudiante;
 import com.ceiba.pension.modelo.dto.DtoInformePension;
 import org.springframework.jdbc.core.RowMapper;
 
