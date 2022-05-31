@@ -14,6 +14,7 @@ public class MapeoInformePension implements RowMapper<DtoInformePension>, Mapper
     @Override
     public DtoInformePension mapRow(ResultSet resultSet, int rowNum) throws SQLException {
 
+        Long id = resultSet.getLong("id");
         String nombreEstudiante = resultSet.getString("nombre_estudiante");
         LocalDate fechaNacimiento = extraerLocalDate(resultSet, "fecha_nacimiento");
         String nombreAcudiente = resultSet.getString("nombre_acudiente");
@@ -25,7 +26,7 @@ public class MapeoInformePension implements RowMapper<DtoInformePension>, Mapper
         double valorTotal = resultSet.getInt("valor_total");
 
 
-        return new DtoInformePension(nombreEstudiante, fechaNacimiento, nombreAcudiente, nombreDocente,
+        return new DtoInformePension(id, nombreEstudiante, fechaNacimiento, nombreAcudiente, nombreDocente,
                 nombreSala, jornada, horasMulta, mesPagado, valorTotal);
     }
 }

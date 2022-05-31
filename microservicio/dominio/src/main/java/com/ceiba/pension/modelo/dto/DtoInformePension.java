@@ -9,6 +9,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 public class DtoInformePension {
 
+    private Long id;
     private String nombreEstudiante;
     private LocalDate fechaNacimiento;
     private String nombreAcudiente;
