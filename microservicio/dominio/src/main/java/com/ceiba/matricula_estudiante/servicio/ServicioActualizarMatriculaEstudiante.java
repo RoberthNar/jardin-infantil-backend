@@ -6,7 +6,7 @@ import com.ceiba.matricula_estudiante.puerto.repositorio.RepositorioMatriculaEst
 
 public class ServicioActualizarMatriculaEstudiante {
 
-    private static final String El_ESTUDIANTE_NO_ESTA_MATRICULADO = "El estudiante no esta matriculado";
+    private static final String EL_ESTUDIANTE_NO_ESTA_MATRICULADO = "El estudiante no esta matriculado";
 
     private final RepositorioMatriculaEstudiante repositorioMatriculaEstudiante;
 
@@ -22,7 +22,7 @@ public class ServicioActualizarMatriculaEstudiante {
     private void validarExistenciaPrevia(MatriculaEstudiante matriculaEstudiante) {
         boolean existe = this.repositorioMatriculaEstudiante.existePorId(matriculaEstudiante.getId());
         if (!existe) {
-            throw new ExcepcionDuplicidad(El_ESTUDIANTE_NO_ESTA_MATRICULADO);
+            throw new ExcepcionDuplicidad(EL_ESTUDIANTE_NO_ESTA_MATRICULADO);
         }
     }
 

@@ -6,7 +6,7 @@ import com.ceiba.pension.puerto.repositorio.RepositorioPension;
 
 public class ServicioActualizarPension {
 
-    private static final String El_ESTUDIANTE_NO_TIENE_UNA_PENSION_PAGADA = "El estudiante no tiene una pension pagada";
+    private static final String EL_ESTUDIANTE_NO_TIENE_UNA_PENSION_PAGADA = "El estudiante no tiene una pension pagada";
 
     private final RepositorioPension repositorioPension;
 
@@ -22,7 +22,7 @@ public class ServicioActualizarPension {
     private void validarExistenciaPrevia(Pension pension) {
         boolean existe = this.repositorioPension.existePorId(pension.getId());
         if (!existe) {
-            throw new ExcepcionDuplicidad(El_ESTUDIANTE_NO_TIENE_UNA_PENSION_PAGADA);
+            throw new ExcepcionDuplicidad(EL_ESTUDIANTE_NO_TIENE_UNA_PENSION_PAGADA);
         }
     }
 
